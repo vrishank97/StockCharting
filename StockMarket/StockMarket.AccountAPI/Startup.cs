@@ -28,6 +28,7 @@ namespace StockMarket.AccountAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StockDBContext>();
+            services.AddScoped<StockDBContext>();
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<IAccountService, AccountService>();
             services.AddControllers();

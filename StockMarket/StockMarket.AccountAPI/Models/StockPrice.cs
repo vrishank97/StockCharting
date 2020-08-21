@@ -14,7 +14,7 @@ namespace StockMarket.AccountAPI.Models
        [Key]
         public int RowId { get; set; }
         [ForeignKey("Company")]
-        [StringLength(30)]
+        [StringLength(25)]
         public string CompanyCode { get; set; }
         [Required]
         [StringLength(30)]

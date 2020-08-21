@@ -28,7 +28,7 @@ namespace StockMarket.AccountAPI.Migrations
                     Password = table.Column<string>(maxLength: 30, nullable: false),
                     Email = table.Column<string>(maxLength: 30, nullable: true),
                     Mobile = table.Column<string>(maxLength: 30, nullable: true),
-                    Confirmed = table.Column<string>(maxLength: 30, nullable: true)
+                    Confirmed = table.Column<string>(maxLength: 30, nullable: true,defaultValue:"YES")
                 },
                 constraints: table =>
                 {
@@ -62,6 +62,7 @@ namespace StockMarket.AccountAPI.Migrations
                 name: "IX_StockPrice_CompanyCode",
                 table: "StockPrice",
                 column: "CompanyCode");
+            //migrationBuilder.Sql("DBCC CHECKIDENT ('User', RESEED, 1000)");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -75,5 +76,6 @@ namespace StockMarket.AccountAPI.Migrations
             migrationBuilder.DropTable(
                 name: "Company");
         }
+       
     }
 }

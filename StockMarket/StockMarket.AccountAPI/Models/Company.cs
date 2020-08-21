@@ -12,7 +12,7 @@ namespace StockMarket.AccountAPI.Models
     public class Company
     {
        [Key]
-       [StringLength(30)]
+       [StringLength(25)]
         public string CompanyCode { get; set; }
         [Required]
         [StringLength(25)]
