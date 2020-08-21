@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using StockMarket.AccountAPI.Repositories;
 using StockMarket.AccountAPI.Models;
+
 namespace StockMarket.AccountAPI.Services
 {
     public class AccountService:IAccountService
@@ -23,5 +24,10 @@ namespace StockMarket.AccountAPI.Services
         {
             return accountRepository.Validate(uname, pwd);
         }
+    }
+    public class Token
+    {
+        public string uname { get; set; }
+        public string token { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StockMarket.AccountAPI.Models;
+
 namespace StockMarket.AccountAPI.DBAccess
 {
     public class StockDBContext:DbContext
@@ -15,7 +16,7 @@ namespace StockMarket.AccountAPI.DBAccess
         public DbSet<Company> Companies { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=SANTU\MSSQLSERVER2019;Initial Catalog=StockMarketDB;User ID=sa;Password=pass@word1");
+            optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=StockMarketDB;User ID=sa;Password=pass@word1");
         }
     }
 }

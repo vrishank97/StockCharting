@@ -22,8 +22,8 @@ namespace StockMarket.AccountAPI.Migrations
             modelBuilder.Entity("StockMarket.AccountAPI.Models.Company", b =>
                 {
                     b.Property<string>("CompanyCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
 
                     b.Property<string>("CEO")
                         .HasColumnType("nvarchar(30)")
@@ -47,8 +47,8 @@ namespace StockMarket.AccountAPI.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CompanyCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
 
                     b.Property<double>("CurrentPrice")
                         .HasColumnType("float");

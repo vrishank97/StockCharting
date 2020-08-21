@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Ocelot" Version="16.0.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
   </ItemGroup>
 
 
